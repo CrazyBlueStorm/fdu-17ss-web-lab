@@ -18,7 +18,10 @@ body{
   margin-bottom: 0.5em;
 }
 .sec-re div{
-  border: 2px solid #C5CAE9;
+  height:150px;
+  border-bottom: 2px solid #C5CAE9;
+  border-left: 2px solid #C5CAE9;
+  border-right: 2px solid #C5CAE9;
 }
 .sec-views h5{
   margin-top: 0.5em;
