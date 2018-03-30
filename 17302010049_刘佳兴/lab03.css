@@ -32,6 +32,7 @@ body{
 .sec-re div img{
   height:100%;
   float: left;
+  max-width: 33.3%;
 }
 .sec-views h5{
   margin-top: 0.5em;
