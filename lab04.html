@@ -1,96 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
    <title>Lab 04</title>
-   <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
-   <link rel="stylesheet" type="text/css" href="./css/lab04.css"/>
+   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+   <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 </head>
 <body>
-<header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
-</header>
-<main>
-   <section>
-      <form class="" action="http://www.randyconnolly.com/tests/process.php" method="post">
-        <fieldset>
-          <legend>PHOTO DETAILS</legend>
-          <table>
-            <tbody>
-              <tr>
-                <td colspan="2">
-                  <p>Title</p>
-                  <input type="text" name="title" value=""
-                  placeholder="Give your photo a descriptive name">
-                  <p>Description</p>
-                  <textarea name="name" rows="8" cols="80"
-                  placeholder="Adding a rich description will help with search results"></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Continent</p>
-                  <select class="" name="Continent">
-                      <option>Choose Continent</option>
-                  </select>
-                  <p>Country</p>
-                  <select class="" name="Country" placeholder='Choose Continent'>
-                      <option>Choose Country</option>
-                  </select>
-                  <p>City</p>
-                  <input type="text" name="city" value="">
-                </td>
-                <td>
-                  <div class="box">
-                    <p>Copyright?</p>
-                    <input type="radio" name="Copyright" value="" id="copyes"><label for="copyes">All rights reserved</label><br>
-                    <input type="radio" name="Copyright" value="" id="copno"><label for="copno">Creative Commons</label>
+  <header class="container">
+    <nav class="collapse navbar-collapse navbar navbar-expand-md navbar-light row">
+      <div class="col-sm-auto text-center">
+        <h1>Share Your Travels</h1>
+        <p class="font-italic">Let us know where you've been</p>
+      </div>
+      <ul class="nav collapse navbar-collapse navbar-nav justify-content-end nav-fill col-md-6 offset-md-1">
+        <li class="nav-item"><a href="lab05.html" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Feeling Lucky</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">User</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container">
+    <form class="row" action="http://www.randyconnolly.com/tests/process.php" method="post">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="w-100">
+                    <h2>Photo Details</h2>
+                    <div class="form-group">
+                      <h5>Title</h5>
+                      <input class="w-100 form-control" type="text" name="title" placeholder="Give your photo a descriptive name">
+                    </div>
+                    <div class="form-group">
+                      <h5>Description</h5>
+                      <textarea class="w-100 form-control" name="name"
+                      placeholder="Adding a rich description will help with search results"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <h5>Continent</h5>
+                      <select class="w-100 form-control" name="Continent">
+                          <option>Choose Continent</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <h5>Country</h5>
+                      <select class="w-100 form-control" name="Country" placeholder='Choose Continent'>
+                          <option>Choose Country</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <h5>City</h5>
+                      <input class="w-100 form-control" type="text" name="city" value="">
+                    </div>
+                    <div class="form-group">
+                      <h5>Copyright?</h5>
+                      <div class="checkbox">
+                        <input type="radio" name="Copyright" value="" id="copyes"><label for="copyes">All rights reserved</label><br>
+                        <input type="radio" name="Copyright" value="" id="copno"><label for="copno">Creative Commons</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>Creative Commons Types</h5>
+                        <div class="form-check-inline">
+                          <input type="checkbox" id="Attribution"><label for="Attribution">Attribution</label>
+                        </div>
+                        <div class="form-check-inline">
+                          <input type="checkbox" name="Noncommercial" id="Noncommercial"><label for="Noncommercial">Noncommercial</label>
+                        </div>
+                        <div class="form-check-inline">
+                          <input type="checkbox" name="Noncommercial" id="Noncommercial"><label for="Noncommercial">Noncommercial</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" name="accept" value="" id="accept"><label for="accept">I accept the software license </label>
+                    </div>
                   </div>
-                  <div class="box">
-                    <p>Creative Commons Types</p>
-                    <input type="checkbox" id="Attribution"><label for="Attribution">Attribution</label><br>
-                    <input type="checkbox" name="Noncommercial" id="Noncommercial"><label for="Noncommercial">Noncommercial</label><br>
-                    <input type="checkbox" name="noDer" id="noDer"><label for="noDer">No Derivative Works</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <h5>Rate this photo:</h5>
+                    <input  class="w-100" type="number" name="rateNumber" value="">
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <div class="rectangle">
-                    <label for="accept">I accept the software license</label><input type="checkbox" name="accept" value="" id="accept">
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <h5>Color Collection</h5>
+                    <input class="w-100" type="text" name="color" value="">
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Rate this photo:</p>
-                  <input type="number" name="rateNumber" value="">
-                  <p>Color Collection</p>
-                  <input type="color" name="color" value="">
-                </td>
-                <td>
-                  <div class="box">
-                    <p>Date Taken:</p>
-                    <input type="date" name="data" value=""><br>
-                    <p>Time Taken:</p>
-                    <input type="time" name="time" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <h5>Date Taken:</h5>
+                    <input class="w-100" type="number" name="rateNumber" value="">
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <div class="rectangle">
-                    <input type="submit" name="button" class="rounded">
-                    <input type="reset" name="button" class="rounded">
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <h5>Time Taken:</h5>
+                    <input class="w-100" type="text" name="color" value="">
                   </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </fieldset>
-      </form>
-   </section>
-</main>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-dark rounded-0" value="Submit"><input type="reset" class="btn btn-dark rounded-0" value="Clear">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+  </section>
 </body>
 </html>
